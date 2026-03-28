@@ -1,0 +1,42 @@
+2026-03-21 10:49:06.774 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\allen.ferreira\AppData\Local\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 85, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "C:\Users\allen.ferreira\AppData\Local\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 576, in code_to_exec
+    exec(code, module.__dict__)
+  File "D:\Unicarioca Pós CIÊNCIAS DE DADOS\P2026A - VISUALIZAÇÃO DE DADOS 2026\Dask_Python_Previsão\dashboard_app.py", line 570, in <module>
+    bairro_rank = bairro_rank[bairro_rank['bairro'].str.ne('')]
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StringMethods' object has no attribute 'ne'
+2026-03-21 10:49:06.969 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\allen.ferreira\AppData\Local\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 85, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "C:\Users\allen.ferreira\AppData\Local\anaconda3\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 576, in code_to_exec
+    exec(code, module.__dict__)
+  File "D:\Unicarioca Pós CIÊNCIAS DE DADOS\P2026A - VISUALIZAÇÃO DE DADOS 2026\Dask_Python_Previsão\dashboard_app.py", line 570, in <module>
+    bairro_rank = bairro_rank[bairro_rank['bairro'].str.ne('')]
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StringMethods' object has no attribute 'ne'
+10:52:41 - cmdstanpy - INFO - Chain [1] start processing
+10:52:43 - cmdstanpy - INFO - Chain [1] done processing
+10:52:43 - cmdstanpy - INFO - Chain [1] start processing
+10:52:44 - cmdstanpy - INFO - Chain [1] done processing
+11:25:39 - cmdstanpy - INFO - Chain [1] start processing
+11:25:44 - cmdstanpy - INFO - Chain [1] done processing
+11:25:45 - cmdstanpy - INFO - Chain [1] start processing
+11:25:45 - cmdstanpy - INFO - Chain [1] done processing
+11:28:20 - cmdstanpy - INFO - Chain [1] start processing
+11:28:22 - cmdstanpy - INFO - Chain [1] done processing
+11:28:22 - cmdstanpy - INFO - Chain [1] start processing
+11:28:23 - cmdstanpy - INFO - Chain [1] done processing
+11:35:36 - cmdstanpy - INFO - Chain [1] start processing
+11:35:41 - cmdstanpy - INFO - Chain [1] done processing
+11:35:41 - cmdstanpy - INFO - Chain [1] start processing
+11:35:42 - cmdstanpy - INFO - Chain [1] done processing
+11:36:51 - cmdstanpy - INFO - Chain [1] start processing
+11:36:55 - cmdstanpy - INFO - Chain [1] done processing
+11:36:55 - cmdstanpy - INFO - Chain [1] start processing
+11:36:56 - cmdstanpy - INFO - Chain [1] done processing

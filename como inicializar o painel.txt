@@ -1,0 +1,1 @@
+Para iniciar o painel a partir do código - executar .\start_dashboard_browser.ps1 no terminal ou no powershell.
