@@ -2,6 +2,7 @@
 
 import re
 import unicodedata
+from pathlib import Path
 from typing import Iterable
 
 import numpy as np
@@ -19,6 +20,8 @@ st.set_page_config(
     layout='wide',
     initial_sidebar_state='expanded',
 )
+
+BASE_DIR = Path(__file__).resolve().parent
 
 
 def normalize_col(name: str) -> str:
@@ -103,7 +106,7 @@ def metric_card(label: str, value: str, help_text: str = '') -> None:
 
 @st.cache_data(show_spinner=False)
 def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    acc = pd.read_csv('acidentes_bh_dashboard.csv', encoding='utf-8-sig', low_memory=False)
+    acc = pd.read_csv(BASE_DIR / 'acidentes_bh_dashboard.csv', encoding='utf-8-sig', low_memory=False)
     acc.columns = [normalize_col(c) for c in acc.columns]
     acc = ensure_boletim_col(acc)
 
@@ -121,7 +124,7 @@ def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         if c in acc.columns:
             acc[c] = pd.to_numeric(acc[c], errors='coerce')
 
-    env = pd.read_excel('Dados_de_Acidentes_de_Transito_em_BH.xlsx', sheet_name='envolvidos')
+    env = pd.read_excel(BASE_DIR / 'Dados_de_Acidentes_de_Transito_em_BH.xlsx', sheet_name='envolvidos')
     env.columns = [normalize_col(c) for c in env.columns]
     env = ensure_boletim_col(env)
 
@@ -135,7 +138,7 @@ def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     if 'idade' in env.columns:
         env['idade'] = pd.to_numeric(env['idade'], errors='coerce')
 
-    veh = pd.read_excel('Dados_de_Acidentes_de_Transito_em_BH.xlsx', sheet_name='veiculos')
+    veh = pd.read_excel(BASE_DIR / 'Dados_de_Acidentes_de_Transito_em_BH.xlsx', sheet_name='veiculos')
     veh.columns = [normalize_col(c) for c in veh.columns]
     veh = ensure_boletim_col(veh)
 
